@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CloudBank.API/CloudBank.API.csproj" />
+  <Project Path="CloudBank.Application/CloudBank.Application.csproj" />
+  <Project Path="CloudBank.Domain/CloudBank.Domain.csproj" />
+  <Project Path="CloudBank.Infrastructure/CloudBank.Infrastructure.csproj" />
+</Solution>

@@ -1,0 +1,16 @@
+C:\Users\User\cloudbank\backend\CloudBank.Application\bin\Debug\net10.0\CloudBank.Application.deps.json
+C:\Users\User\cloudbank\backend\CloudBank.Application\bin\Debug\net10.0\CloudBank.Application.dll
+C:\Users\User\cloudbank\backend\CloudBank.Application\bin\Debug\net10.0\CloudBank.Application.pdb
+C:\Users\User\cloudbank\backend\CloudBank.Application\bin\Debug\net10.0\CloudBank.Domain.dll
+C:\Users\User\cloudbank\backend\CloudBank.Application\bin\Debug\net10.0\CloudBank.Domain.pdb
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\CloudBank.Application.csproj.AssemblyReference.cache
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\CloudBank.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\CloudBank.Application.AssemblyInfoInputs.cache
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\CloudBank.Application.AssemblyInfo.cs
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\CloudBank.Application.csproj.CoreCompileInputs.cache
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\CloudBank.Application.sourcelink.json
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\CloudBan.EAD616CF.Up2Date
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\CloudBank.Application.dll
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\refint\CloudBank.Application.dll
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\CloudBank.Application.pdb
+C:\Users\User\cloudbank\backend\CloudBank.Application\obj\Debug\net10.0\ref\CloudBank.Application.dll

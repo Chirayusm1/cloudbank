@@ -1,0 +1,6 @@
+@CloudBank.API_HostAddress = http://localhost:5098
+
+GET {{CloudBank.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

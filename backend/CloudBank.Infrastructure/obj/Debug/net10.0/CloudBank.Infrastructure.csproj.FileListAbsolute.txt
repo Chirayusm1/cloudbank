@@ -16,3 +16,5 @@ C:\Users\User\cloudbank\backend\CloudBank.Infrastructure\obj\Debug\net10.0\Cloud
 C:\Users\User\cloudbank\backend\CloudBank.Infrastructure\obj\Debug\net10.0\refint\CloudBank.Infrastructure.dll
 C:\Users\User\cloudbank\backend\CloudBank.Infrastructure\obj\Debug\net10.0\CloudBank.Infrastructure.pdb
 C:\Users\User\cloudbank\backend\CloudBank.Infrastructure\obj\Debug\net10.0\ref\CloudBank.Infrastructure.dll
+C:\Users\User\cloudbank\backend\CloudBank.Infrastructure\bin\Debug\net10.0\CloudBank.Infrastructure.runtimeconfig.json
+C:\Users\User\cloudbank\backend\CloudBank.Infrastructure\obj\Debug\net10.0\CloudBank.Infrastructure.genruntimeconfig.cache

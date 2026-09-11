@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CloudBank.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bef190987f8fe2501242c3b1484b812d496c264")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03bfdfd5f38e5381b77666474246515eabfbd55e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CloudBank.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CloudBank.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

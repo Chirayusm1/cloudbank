@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CloudBank.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03bfdfd5f38e5381b77666474246515eabfbd55e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0dcecbaa6c5f87d1a35895dd3a4377d1ee74c9b")]
 [assembly: System.Reflection.AssemblyProductAttribute("CloudBank.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CloudBank.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

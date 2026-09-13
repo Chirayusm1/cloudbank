@@ -1,11 +1,13 @@
 using CloudBank.Application.DTOs;
 using CloudBank.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CloudBank.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class AccountController : ControllerBase
 {
     private readonly IAccountService _accountService;

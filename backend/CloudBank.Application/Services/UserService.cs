@@ -7,10 +7,14 @@ namespace CloudBank.Application.Services;
 public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
+    private readonly IPasswordHasher _passwordHasher;
 
-    public UserService(IUserRepository userRepository)
+    public UserService(
+        IUserRepository userRepository,
+        IPasswordHasher passwordHasher)
     {
         _userRepository = userRepository;
+        _passwordHasher = passwordHasher;
     }
 
     public async Task<UserResponse> CreateUserAsync(
@@ -30,7 +34,7 @@ public class UserService : IUserService
             Id = Guid.NewGuid(),
             Name = request.Name,
             Email = request.Email,
-            PasswordHash = request.Password,
+            PasswordHash = _passwordHasher.HashPassword(request.Password),
             Role = "Customer",
             CreatedAt = DateTime.UtcNow
         };

@@ -173,3 +173,5 @@ C:\Users\User\cloudbank\backend\CloudBank.API\bin\Debug\net10.0\zh-Hant\Microsof
 C:\Users\User\cloudbank\backend\CloudBank.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\User\cloudbank\backend\CloudBank.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\User\cloudbank\backend\CloudBank.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\User\cloudbank\backend\CloudBank.API\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\User\cloudbank\backend\CloudBank.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

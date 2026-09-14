@@ -7,10 +7,14 @@ namespace CloudBank.Application.Services;
 public class AccountService : IAccountService
 {
     private readonly IAccountRepository _accountRepository;
+    private readonly IRedisCacheService _redisCacheService;
 
-    public AccountService(IAccountRepository accountRepository)
+    public AccountService(
+        IAccountRepository accountRepository,
+        IRedisCacheService redisCacheService)
     {
         _accountRepository = accountRepository;
+        _redisCacheService = redisCacheService;
     }
 
     public async Task<AccountResponse> CreateAccountAsync(
@@ -42,11 +46,34 @@ public class AccountService : IAccountService
 
     public async Task<AccountResponse?> GetAccountByIdAsync(Guid id)
     {
+        var cacheKey = $"account:{id}";
+
+        // 1. Check Redis first
+        var cachedAccount =
+            await _redisCacheService.GetAsync<AccountResponse>(cacheKey);
+
+        if (cachedAccount is not null)
+        {
+            return cachedAccount;
+        }
+
+        // 2. Cache miss - get account from database
         var account = await _accountRepository.GetByIdAsync(id);
 
-        return account == null
-            ? null
-            : MapToResponse(account);
+        if (account is null)
+        {
+            return null;
+        }
+
+        var response = MapToResponse(account);
+
+        // 3. Store the response in Redis for 5 minutes
+        await _redisCacheService.SetAsync(
+            cacheKey,
+            response,
+            TimeSpan.FromMinutes(5));
+
+        return response;
     }
 
     private static string GenerateAccountNumber()

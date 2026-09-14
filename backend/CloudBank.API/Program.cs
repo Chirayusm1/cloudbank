@@ -8,6 +8,8 @@ using CloudBank.Application.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using StackExchange.Redis;
+using CloudBank.Infrastructure.Caching;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,6 +49,12 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<CloudBankDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("CloudBankDb")));
+        
+builder.Services.AddSingleton<IConnectionMultiplexer>(
+    ConnectionMultiplexer.Connect(
+        builder.Configuration.GetConnectionString("Redis")!));
+
+builder.Services.AddSingleton<IRedisCacheService, RedisCacheService>();
 
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<IAccountService, AccountService>();
@@ -64,7 +72,24 @@ builder.Services.AddScoped<ITokenService, JwtTokenService>();
 //     builder.Configuration.GetSection("Jwt"));
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.ParameterLocation.Header,
+        Description = "Enter your JWT token"
+    });
+
+    options.AddSecurityRequirement(document =>
+        new Microsoft.OpenApi.OpenApiSecurityRequirement
+        {
+            [new Microsoft.OpenApi.OpenApiSecuritySchemeReference("Bearer", document)] = []
+        });
+});
 
 
 

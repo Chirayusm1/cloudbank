@@ -31,7 +31,6 @@ public class AccountRepository : IAccountRepository
     public async Task<Account?> GetByIdAsync(Guid id)
     {
         return await _dbContext.Accounts
-            .AsNoTracking()
             .FirstOrDefaultAsync(x => x.Id == id);
     }
 

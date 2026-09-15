@@ -10,6 +10,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using StackExchange.Redis;
 using CloudBank.Infrastructure.Caching;
+using CloudBank.API.Middleware;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -62,6 +64,9 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
+
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
 builder.Services.AddScoped<IAuthService, AuthService>();
@@ -105,6 +110,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.MapControllers();
 
